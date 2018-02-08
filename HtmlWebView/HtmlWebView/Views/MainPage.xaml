@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HtmlWebView.Views.MainPage"
+             xmlns:control="clr-namespace:HtmlWebView.Control"
+             Title="{Binding Title}">
+
+    <StackLayout HorizontalOptions="CenterAndExpand"
+                 VerticalOptions="StartAndExpand">
+
+        <control:ExtendedWebView HorizontalOptions="FillAndExpand"
+                                 VerticalOptions="FillAndExpand">
+            <control:ExtendedWebView.Source>
+                <HtmlWebViewSource Html="{Binding HtmlString}" />
+            </control:ExtendedWebView.Source>
+        </control:ExtendedWebView>
+        <!--<WebView Source="http://xamarin.com" HeightRequest="200" VerticalOptions="FillAndExpand" HorizontalOptions="CenterAndExpand"/>-->
+
+    </StackLayout>
+
+</ContentPage>
